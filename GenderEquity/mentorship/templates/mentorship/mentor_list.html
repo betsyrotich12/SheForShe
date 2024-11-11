@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Mentors</h1>
+<ul>
+    {% for mentor in mentors %}
+        <li><a href="{% url 'mentor_profile' mentor.pk %}">{{ mentor.user.username }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

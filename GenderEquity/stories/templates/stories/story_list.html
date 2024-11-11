@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Impact Stories</h1>
+<ul>
+    {% for story in stories %}
+        <li><a href="{% url 'story_detail' story.pk %}">{{ story.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
